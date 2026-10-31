@@ -1,0 +1,213 @@
+---
+title: "The nine traits"
+description: "Every trait, both of its sides, and what it changes in a fight and in town."
+icon: "list"
+---
+
+Each trait runs between two sides. A hero can sit at either extreme or anywhere between, and most heroes lean clearly one way on a few traits and sit near the middle on the rest.
+
+Pick a trait and a side to see how a hero who leans that way acts. Everything it shows is written out in full below.
+
+<TraitExplorer />
+
+## Fight traits
+
+### Nerve: Fearless or Wary
+
+Nerve shows when a pack of enemies is in sight. It sets how eagerly a hero closes on that pack and how early they run.
+
+- **Fearless** heroes close on a pack eagerly and run late. When a threat comes close, the brave taunt it.
+- **Wary** heroes hang back and run sooner. A place where they once met danger feels doubtful to them long before it would to a fearless hero. When fear hits, the timid are the first to speak, and a coward never taunts.
+- **In town**, nerve decides who goes to the Training Ground. The fearless drill sooner and more often than the wary.
+
+### Composure: Steady or Brittle
+
+Composure shows when a hero is wounded. It reads how hard the wound hits them and shapes how they hold together while hurt, including whether they call out for help when an ally is near.
+
+- **In town**, composure decides who goes to rest early.
+
+### Vengeance: Vengeful or Forgiving
+
+Vengeance shows when a hero holds a grudge or someone attacks them. It decides which enemy they go for first: the species they hold a grudge against, or the one who struck them.
+
+- **Vengeful** heroes go for that target first, and more surely than a forgiving hero.
+- **Forgiving** heroes are less pulled toward it.
+- Vengeance is the one trait that never shows in town.
+
+<Card title="How grudges work" icon="skull" href="/heroes/grudges" horizontal>
+  What starts a grudge, what it does and how it ends.
+</Card>
+
+## Bond traits
+
+### Loyalty: Loyal or Lone
+
+Loyalty shows when an ally is under threat. It decides which threatened ally a hero steps in to defend, and how strongly they want to regroup when the party gets split.
+
+- **Loyal** heroes step in front of a threatened ally and call out danger to them.
+- **Lone** heroes let an ally find out about the danger on their own.
+- **In town**, loyalty decides who seeks company. The loyal go looking for their friends.
+
+<Frame caption="The tender one runs to whoever is hurt worst.">
+  <img src="https://0d65e9a3.sonder-landing-3gw.pages.dev/heroes/trait-compassion.jpg" alt="A healer in a white hood kneels beside a wounded orc warrior slumped against a dungeon wall, her hand glowing" />
+</Frame>
+
+### Compassion: Tender or Cold
+
+Compassion shows when an ally is wounded.
+
+- **Tender** heroes run to whoever is hurt worst.
+- **Cold** heroes feel that pull far less.
+- **In town**, compassion decides which ally a hero walks over to chat with. The tender pick whoever is loneliest.
+
+## Drive traits
+
+### Ambition: Climber or Settled
+
+Ambition shows when the exit is known or there is a floor still to climb.
+
+- **Climbers** feel the full pull of the exit. On a cleared floor, they walk past a chest.
+- **Settled** heroes feel that pull less, so on a cleared floor they linger over the chest the climber walked past.
+- **In town**, ambition decides who drills at the Training Ground.
+
+<Frame caption="The party fights on. The hoarder kneels at the chest.">
+  <img src="https://0d65e9a3.sonder-landing-3gw.pages.dev/heroes/trait-greed.jpg" alt="A party fights skeletons in a crypt while a hooded hero kneels at a glowing treasure chest" />
+</Frame>
+
+### Greed: Hoarder or Freehand
+
+Greed shows when there is a chest, a fresh kill, or a kill within reach.
+
+- **Hoarders** press the attack that would land a kill. They want chests more than anyone and risk more to reach them.
+- **Freehands** want chests less, and step back or run sooner.
+- **In town**, greed decides who browses the blacksmith.
+
+### Curiosity: Seeker or Homebound
+
+Curiosity shows when there is unexplored ground nearby.
+
+- **Seekers** feel the pull of every unexplored path at least as strongly as anyone, and feel less pull back to the group.
+- **Homebound** heroes stay closer to the group.
+- **In town**, curiosity decides how far from the gate a hero strolls.
+
+### Hope: Hopeful or Despairing
+
+Hope shows when a hero is wounded or an ally has fallen.
+
+- **Hopeful** heroes cheer after a kill they landed themselves.
+- When an ally dies, hope decides who gives in to despair.
+- **In town**, hope sets the mood of a hero's gestures: bright for the hopeful, dark for the despairing.
+
+## What heroes say
+
+Heroes speak during a run: they taunt, warn, cheer, call for help and despair, each one when their traits push them to it. What a hero says never changes what they do. It only lets you hear what is going on inside them.
+
+In town, a hero with a strong need for company and a loyal streak hums or gestures, and their hope sets whether that mood is bright or dark.
+
+<Visibility for="agents">
+| Trait | Side | In a fight | In town |
+| --- | --- | --- | --- |
+| Nerve | Fearless | Closes on a pack eagerly, runs late, taunts close threats | Drills sooner and more often |
+| Nerve | Wary | Hangs back, runs sooner, doubts places where danger was met, speaks fear first | Drills later and less |
+| Composure | Both | Shapes how a wounded hero holds together and calls for help | Decides who rests early |
+| Vengeance | Vengeful | Goes for the grudge species or attacker first | Does not show |
+| Vengeance | Forgiving | Less pulled toward that target | Does not show |
+| Loyalty | Loyal | Defends threatened allies, warns them | Seeks company |
+| Loyalty | Lone | Lets allies find out on their own | Seeks company less |
+| Compassion | Tender | Runs to whoever is hurt worst | Chats with the loneliest |
+| Compassion | Cold | Feels that pull far less | |
+| Ambition | Climber | Full pull of the exit, walks past a chest on a cleared floor | Ambition decides who drills |
+| Ambition | Settled | Lingers over that chest | Ambition decides who drills |
+| Greed | Hoarder | Presses for the kill, wants chests, risks more | Browses the blacksmith |
+| Greed | Freehand | Wants chests less, steps back sooner | |
+| Curiosity | Seeker | Pulled by unexplored paths, less by the group | Strolls far from the gate |
+| Curiosity | Homebound | Stays closer to the group | Stays near the gate |
+| Hope | Hopeful | Cheers own kills | Bright gestures |
+| Hope | Despairing | Gives in to despair when an ally dies | Dark gestures |
+</Visibility>
+
+export const TraitExplorer = () => {
+  const TRAITS = [
+    { name: "Nerve", family: "Fight", when: "A pack of enemies is in sight.",
+      sides: [
+        { label: "Fearless", fight: "Closes on the pack eagerly and runs late. Taunts a threat that comes close.", town: "Drills at the Training Ground sooner and more often." },
+        { label: "Wary", fight: "Hangs back and runs sooner. A place where danger was met feels doubtful early. Speaks up first when afraid, and never taunts.", town: "Drills later and less often than the fearless." }
+      ] },
+    { name: "Composure", family: "Fight", when: "The hero is wounded.",
+      sides: [
+        { label: "Steady", fight: "Composure reads how hard a wound hits and shapes how a hurt hero holds together and calls for help.", town: "Composure decides who rests early." },
+        { label: "Brittle", fight: "Composure reads how hard a wound hits and shapes how a hurt hero holds together and calls for help.", town: "Composure decides who rests early." }
+      ] },
+    { name: "Vengeance", family: "Fight", when: "The hero holds a grudge or is attacked.",
+      sides: [
+        { label: "Vengeful", fight: "Goes first for the grudge species or the attacker, more surely than a forgiving hero.", town: "Vengeance never shows in town." },
+        { label: "Forgiving", fight: "Less pulled toward the grudge species or the attacker.", town: "Vengeance never shows in town." }
+      ] },
+    { name: "Loyalty", family: "Bond", when: "An ally is under threat.",
+      sides: [
+        { label: "Loyal", fight: "Steps in front of a threatened ally and calls out the danger. Wants to regroup when split.", town: "Goes looking for friends." },
+        { label: "Lone", fight: "Lets an ally find out about the danger alone.", town: "Seeks company less." }
+      ] },
+    { name: "Compassion", family: "Bond", when: "An ally is wounded.",
+      sides: [
+        { label: "Tender", fight: "Runs to whoever is hurt worst.", town: "Walks over to chat with whoever is loneliest." },
+        { label: "Cold", fight: "Feels the pull toward a wounded ally far less.", town: "Less drawn to the lonely." }
+      ] },
+    { name: "Ambition", family: "Drive", when: "The exit is known or a floor is left to climb.",
+      sides: [
+        { label: "Climber", fight: "Feels the full pull of the exit and walks past a chest on a cleared floor.", town: "Ambition decides who drills at the Training Ground." },
+        { label: "Settled", fight: "Feels the exit less and lingers over the chest the climber walked past.", town: "Ambition decides who drills at the Training Ground." }
+      ] },
+    { name: "Greed", family: "Drive", when: "A chest, a fresh kill or a kill within reach.",
+      sides: [
+        { label: "Hoarder", fight: "Presses the attack that lands the kill, wants chests most and risks more for them.", town: "Browses the blacksmith." },
+        { label: "Freehand", fight: "Wants chests less, steps back and runs sooner.", town: "Browses the blacksmith less." }
+      ] },
+    { name: "Curiosity", family: "Drive", when: "Unexplored ground is nearby.",
+      sides: [
+        { label: "Seeker", fight: "Feels every unexplored path strongly and feels less pull back to the group.", town: "Strolls far from the gate." },
+        { label: "Homebound", fight: "Stays closer to the group.", town: "Strolls closer to the gate." }
+      ] },
+    { name: "Hope", family: "Drive", when: "The hero is wounded or an ally has fallen.",
+      sides: [
+        { label: "Hopeful", fight: "Cheers after a kill they landed.", town: "Bright gestures." },
+        { label: "Despairing", fight: "Gives in to despair when an ally dies.", town: "Dark gestures." }
+      ] }
+  ];
+  const [t, setT] = useState(0);
+  const [s, setS] = useState(0);
+  const trait = TRAITS[t];
+  const side = trait.sides[s];
+  const btn = (active) => ({
+    padding: "6px 12px", borderRadius: 6, cursor: "pointer", fontSize: 14,
+    border: active ? "1px solid #C9643A" : "1px solid rgba(232,223,207,0.2)",
+    background: active ? "rgba(201,100,58,0.18)" : "transparent",
+    color: "#E8DFCF"
+  });
+  return (
+    <div className="not-prose" style={{ border: "1px solid rgba(176,138,85,0.35)", borderRadius: 12, padding: 20, background: "rgba(232,223,207,0.03)", color: "#E8DFCF", margin: "16px 0" }}>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 16 }}>
+        {TRAITS.map((tr, i) => (
+          <button key={tr.name} style={btn(i === t)} onClick={() => { setT(i); setS(0); }}>{tr.name}</button>
+        ))}
+      </div>
+      <div style={{ fontSize: 12, letterSpacing: 2, textTransform: "uppercase", color: "#B08A55" }}>{trait.family} trait</div>
+      <div style={{ fontSize: 14, opacity: 0.8, margin: "4px 0 12px" }}>Shows when: {trait.when}</div>
+      <div style={{ display: "flex", gap: 8, marginBottom: 16 }}>
+        {trait.sides.map((sd, i) => (
+          <button key={sd.label} style={btn(i === s)} onClick={() => setS(i)}>{sd.label}</button>
+        ))}
+      </div>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
+        <div style={{ borderLeft: "2px solid #C9643A", paddingLeft: 12 }}>
+          <div style={{ fontSize: 12, letterSpacing: 2, textTransform: "uppercase", color: "#C9643A", marginBottom: 4 }}>In a fight</div>
+          <div style={{ fontSize: 15, lineHeight: 1.5 }}>{side.fight}</div>
+        </div>
+        <div style={{ borderLeft: "2px solid #B08A55", paddingLeft: 12 }}>
+          <div style={{ fontSize: 12, letterSpacing: 2, textTransform: "uppercase", color: "#B08A55", marginBottom: 4 }}>In town</div>
+          <div style={{ fontSize: 15, lineHeight: 1.5 }}>{side.town}</div>
+        </div>
+      </div>
+    </div>
+  );
+};
